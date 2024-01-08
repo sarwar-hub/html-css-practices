@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+</head>
+<style>
+    * {
+        margin: 0;
+    }
+    .area-1 {
+        height: 200px;
+        display: flex;
+    }
+    .upper-box {
+        width: 50%;
+        overflow-y: auto;
+    }
+
+
+    .lower-box {
+        width: 150px;
+        height: 20px;
+        border: 1px solid black;
+        overflow: hidden; /* to prevent overflow */
+    }
+    .lower-box p {
+        overflow: hidden; /* to work ellipsis */
+        white-space: nowrap; /* to bring the text in line */
+        text-overflow: ellipsis; /* to show three dots */
+    }
+</style>
+<body>
+    <div class="area-1">
+        <div class="upper-box content-left">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora dolorem, vitae consequatur praesentium mollitia nostrum alias distinctio eos iure minima magni quis placeat qui vero exercitationem provident est ratione quisquam sed! Doloremque deserunt ex esse, aut facere at alias unde architecto dignissimos quisquam consectetur, quos reprehenderit modi consequuntur totam. Explicabo eligendi facere ullam aperiam. Modi alias ducimus, provident accusantium est blanditiis libero quae ab sunt nam maiores praesentium, ratione consequuntur, distinctio quas doloribus! Quidem, facilis accusamus! Nihil ducimus illo fugiat quia voluptatibus numquam iure? Eligendi nostrum, fugit quam accusantium rem consequatur adipisci quis. Porro vel voluptas architecto molestiae suscipit dicta exercitationem, cupiditate numquam doloribus! Nisi fuga dolorem enim vero magnam, repudiandae accusamus, temporibus aperiam sequi reprehenderit tempora, ex iste nemo vel voluptatem fugiat inventore omnis praesentium. Et corporis expedita rem odit dolorum modi, distinctio incidunt quia aliquid quis quasi beatae fugit, eos animi, omnis numquam voluptates saepe. Deleniti architecto, iusto praesentium debitis nulla incidunt id sapiente quae molestiae veniam amet et fugiat facilis iste ratione vitae est quis dolore asperiores soluta autem ipsa iure dignissimos? Minima odio atque molestiae voluptatem incidunt exercitationem. Incidunt at aliquam saepe deserunt aut quibusdam cumque illo molestias sint veniam. Dicta vel minima a quisquam molestias!</p>
+        </div>
+        <div class="upper-box content-right">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora dolorem, vitae consequatur praesentium mollitia nostrum alias distinctio eos iure minima magni quis placeat qui vero exercitationem provident est ratione quisquam sed! Doloremque deserunt ex esse, aut facere at alias unde architecto dignissimos quisquam consectetur, quos reprehenderit modi consequuntur totam. Explicabo eligendi facere ullam aperiam. Modi alias ducimus, provident accusantium est blanditiis libero quae ab sunt nam maiores praesentium, ratione consequuntur, distinctio quas doloribus! Quidem, facilis accusamus! Nihil ducimus illo fugiat quia voluptatibus numquam iure? Eligendi nostrum, fugit quam accusantium rem consequatur adipisci quis. Porro vel voluptas architecto molestiae suscipit dicta exercitationem, cupiditate numquam doloribus! Nisi fuga dolorem enim vero magnam, repudiandae accusamus, temporibus aperiam sequi reprehenderit tempora, ex iste nemo vel voluptatem fugiat inventore omnis praesentium. Et corporis expedita rem odit dolorum modi, distinctio incidunt quia aliquid quis quasi beatae fugit, eos animi, omnis numquam voluptates saepe. Deleniti architecto, iusto praesentium debitis nulla incidunt id sapiente quae molestiae veniam amet et fugiat facilis iste ratione vitae est quis dolore asperiores soluta autem ipsa iure dignissimos? Minima odio atque molestiae voluptatem incidunt exercitationem. Incidunt at aliquam saepe deserunt aut quibusdam cumque illo molestias sint veniam. Dicta vel minima a quisquam molestias!</p>
+        </div>
+    </div>
+    <hr>
+    <div class="area-2">
+        <div class="lower-box">
+            <!-- showing full text in tool tip -->
+            <p title="Lorem ipsum, dolor sit amet consectetur adipisicing elit.">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+    </div>
+</body>
+</html>

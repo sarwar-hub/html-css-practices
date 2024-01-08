@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive navigation</title>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <!-- Logo -->
+            <div class="logo">My <span>LOGO</span></div>
+            <!-- Toogle bar for mobile -->
+            <input type="checkbox" id="tooglebar">
+            <label for="tooglebar" style="color: white;">TOOGLE</label>
+            <nav class="navigation">
+                <!-- Navigation -->
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">BLOG +</a>
+                        <!-- Sub menu -->
+                        <ul>
+                            <li><a href="#">NORMAL</a></li>
+                            <li><a href="#">DYNAMIC</a></li>
+                            <li><a href="#">CLASSIC +</a>
+                                <!-- Childs of sub menu -->
+                                <ul>
+                                    <li><a href="#">AUDIO</a></li>
+                                    <li><a href="#">VIDEO</a></li>
+                                    <li><a href="#">GALLERY</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">CONTACT</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">LOGIN</a></li>
+                </ul>
+            </nav>  
+        </div>
+    </header>
+</body>
+</html>
+
+
+
+
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: Verdana, Tahoma, sans-serif;
+    text-decoration: none;
+}
+
+/* full hero */
+
+.nav-container .logo {
+    color: white;
+    font-weight: bold;
+}
+.nav-container span {
+    color: black;
+    padding: 5px;
+    background-color: rgb(255, 255, 255);
+}
+nav ul li a {
+    color: white;
+    font-size: 12px;
+    padding: 20px;
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* hover colors of different uls li */
+nav ul li:hover a {
+    background-color: rgb(35, 35, 35);
+}
+nav ul li ul li:hover a {
+    background-color: black;
+}
+nav ul li ul li ul li:hover a {
+    background-color: rgb(35, 35, 35);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Navigation menu config (desktop only) */
+.nav-container {
+    display: flex;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    padding: 0px 10%;
+    background-color: black;
+    box-shadow: 0px 5px 100px rgba(0,0,0,0.2);
+    align-items: center;
+    justify-content: space-between;
+}
+nav ul li {
+   position: relative;
+   float: left;
+}
+nav ul li ul {
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background: black;
+    display: none;
+}
+nav ul li ul li {
+    width: 100%;
+    border-top: 1px solid rgb(52, 52, 52);
+}
+nav ul li ul li ul {
+    left: 200px;
+    top: 0;
+}
+nav ul li:focus-within>ul,
+nav ul li:hover>ul {
+    display: initial;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Navigation menu config (under 767px) */
+#tooglebar {
+    display: none;
+}
+.nav-container label {
+    cursor: pointer;
+    font-size: 12px;
+    display: none;
+}
+@media screen and (max-width: 767px) {
+    .nav-container label {
+        display: initial;
+    }
+
+    /* main menu */
+    nav.navigation {
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background-color: black;
+        /* display none for normal in mobile */
+        /* display: none; */
+    }
+    nav ul li {
+        width: 100%;
+        border-top: 1px solid rgb(52, 52, 52);
+    }
+    .nav-container {
+        padding: 20px 10%;
+    }
+
+
+    /* Sub menu */
+    nav ul li ul {
+        position: relative;
+        width: 100%;
+        left: 40px;
+    }
+    nav ul li ul li {
+        background-color: rgba(255, 255, 255, 0.221);
+    }
+    nav ul li ul li ul {
+        left: 40px;
+    }
+    /* nav will display if checked the checkbox 
+    code here
+    */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************************************/
+
+
+
+</style>
